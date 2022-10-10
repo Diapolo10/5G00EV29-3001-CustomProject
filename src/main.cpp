@@ -9,16 +9,22 @@ void setup() {
   setupMotor();
 }
 
-void loop() {
-  int count = 0;
-  while (count < 12) {
-    Motor_CCW(); // make the stepper to anticlockwise rotate
-    count++;
-  }
+void windshieldWiper() {
+  while (1) {
+    int count = 0;
+    while (count < 12) {
+      Motor_CCW(); // make the stepper to anticlockwise rotate
+      count++;
+    }
 
-  count = 0;
-  while (count < 12) {
-    Motor_CW(); //make the stepper to clockwise rotate
-    count++;
+    count = 0;
+    while (count < 12) {
+      Motor_CW(); // make the stepper to clockwise rotate
+      count++;
+    }
   }
+}
+
+void loop() {
+  windshieldWiper();
 }

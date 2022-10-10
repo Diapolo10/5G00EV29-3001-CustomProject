@@ -55,3 +55,14 @@ void setupMotor() {
     Motor_CCW();
   }
 }
+
+void rotateStepsCW(int steps) {
+  for (size_t i = 0; i < steps; i++)
+    Motor_CW();
+
+}
+
+void rotateStepsCCW(int steps) {
+  for (size_t i = 0; i < steps; i++)
+    Motor_CCW();
+}
